@@ -1,0 +1,13 @@
+.reg-container label{
+    display:block;
+    margin-bottom: 10px;
+}
+.reg-container{
+    width:300px;
+    margin:0 auto;
+    text-align:center;
+}
+.reg-container input{
+    display:block;
+    margin:10px auto;
+}
