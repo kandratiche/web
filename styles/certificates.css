@@ -1,0 +1,75 @@
+.certificates-container {
+    padding: 30px;
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.certificate-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.certificate-header img {
+    width: 30px;
+    height: 30px;
+}
+
+.certificate-card h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #222;
+}
+
+.certificate-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 3px 0;
+}
+
+.status {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.status.not-started {
+    color: red;
+}
+
+.view-btn {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #000; /* black button */
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.view-btn:hover {
+    opacity: 0.8;
+}
