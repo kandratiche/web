@@ -1,0 +1,92 @@
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+/* Карточка курса */
+.course-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Картинка сверху */
+.course-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Информация внутри */
+.course-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-info h3 {
+  font-size: 1.1em;
+  margin: 0 0 6px 0;
+  color: #222;
+}
+
+.instructor {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.details {
+  font-size: 0.8em;
+  color: #999;
+  margin: 8px 0;
+}
+
+.status {
+  font-size: 0.85em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.status.in-progress { color: orange; }
+.status.not-started { color: crimson; }
+.status.completed { color: green; }
+
+/* Кнопки */
+.course-button {
+  margin-top: auto; /* кнопка всегда внизу карточки */
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.9em;
+}
+
+.course-button:hover {
+  background: #0056b3;
+}
+
+.course-button.view-cert {
+  background: #28a745;
+}
+
+.course-button.view-cert:hover {
+  background: #1e7e34;
+}
