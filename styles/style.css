@@ -84,3 +84,15 @@ a {
   width: calc(100vw - 23em);
   height: calc(100vh - 4em);
 }
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 3em;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
