@@ -16,9 +16,8 @@ body {
 }
 
 .app-header-company {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-left: 1em;
+    width: 50px;
+    margin-left: 2em;
     margin-right: 2em;
     cursor: default;
 }

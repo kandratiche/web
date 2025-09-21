@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/reccomendation.css">
+    <link rel="stylesheet" href="./styles/navbar.css"/>
     <title>Recommendations</title>
 </head>
 <body>
     <header id="app-header">
-        <h1 class="app-header-company">Mearn</h1>
+        <img class="app-header-company" src="Morphines LOGO.jpg" alt="Mearn"/>
         <p class="app-header-info">Home</p>
         <p class="app-header-info">Courses</p>
         <p class="app-header-info">Support</p>
@@ -18,35 +19,45 @@
         </div>
     </header>
     <div class="recommend-container">
-<div class="recommend-card">
-        <img src="./images/machine-learning.jpg" alt="Machine Learning" class="recommend-image">
-        <div class="recommend-info">
-          <h3>Introduction to Machine Learning</h3>
-          <p class="instructor">Dr. Alice Brown</p>
-          <p class="details">24 Lessons • 10h</p>
-          <button class="recommend-button">Start Now</button>
+      <nav class="navbar">
+        <div class="navbar-menu">
+          <h3 class="navbar-section">Menu</h3>
+          <ul class="navbar-list">
+            <li class="navbar-item">Home</li>
+            <li class="navbar-item">Courses</li>
+            <li class="navbar-item">Support</li>
+          </ul>
+        </div>  
+      </nav>
+      <div class="recommend-content">
+        <div class="recommend-card">
+          <img src="./images/machine-learning.jpg" alt="Machine Learning" class="recommend-image">
+          <div class="recommend-info">
+            <h3>Introduction to Machine Learning</h3>
+            <p class="instructor">Dr. Alice Brown</p>
+            <p class="details">24 Lessons • 10h</p>
+            <button class="recommend-button">Start Now</button>
+          </div>
         </div>
-      </div>
-
- <!-- Recommendation 2 -->
-      <div class="recommend-card">
-        <img src="./images/frontend.jpg" alt="Frontend Development" class="recommend-image">
-        <div class="recommend-info">
-          <h3>Frontend Development Essentials</h3>
-          <p class="instructor">Michael Adams</p>
-          <p class="details">30 Lessons • 14h</p>
-          <button class="recommend-button">Start Now</button>
+    
+        <div class="recommend-card">
+          <img src="./images/frontend.jpg" alt="Frontend Development" class="recommend-image">
+          <div class="recommend-info">
+            <h3>Frontend Development Essentials</h3>
+            <p class="instructor">Michael Adams</p>
+            <p class="details">30 Lessons • 14h</p>
+            <button class="recommend-button">Start Now</button>
+          </div>
         </div>
-      </div>
-
-      <!-- Recommendation 3 -->
-      <div class="recommend-card">
-        <img src="./images/cloud.jpg" alt="Cloud Computing" class="recommend-image">
-        <div class="recommend-info">
-          <h3>Cloud Computing Basics</h3>
-          <p class="instructor">Emily Davis</p>
-          <p class="details">18 Lessons • 8h</p>
-          <button class="recommend-button">Start Now</button>
+    
+        <div class="recommend-card">
+          <img src="./images/cloud.jpg" alt="Cloud Computing" class="recommend-image">
+          <div class="recommend-info">
+            <h3>Cloud Computing Basics</h3>
+            <p class="instructor">Emily Davis</p>
+            <p class="details">18 Lessons • 8h</p>
+            <button class="recommend-button">Start Now</button>
+          </div>
         </div>
       </div>
     </div>
