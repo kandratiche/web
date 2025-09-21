@@ -40,6 +40,11 @@
     transition: 0.3s;
 }
 
+.navbar-item.active {
+    background-color: black;
+    color: white;
+}
+
 .navbar-item:hover {
     background-color: black;
     color: white;

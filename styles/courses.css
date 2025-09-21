@@ -6,23 +6,28 @@
 
 .courses-content {
   display: grid;
+  background-color: black;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  padding: 20px;
-  gap: 20px;
-  width: calc(100vw - 23em);
+  margin-top: 3em;
+  margin-left: 2.1em;
+  margin-bottom: 2em;
+  border-radius: 15px;
+  width: calc(100vw - 27.2em);
 }
 
 .course-card {
-  background: black;
-  margin-top: calc(3em - 20px);
-  margin-left: calc(2em - 20px);
+  background: white;
+  margin-top: 3em;
+  margin-left: 3em;
   border-radius: 12px;
-  height: 25em;
+  width: 15.5em;
+  height: 23em;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
+  margin-bottom: 2em;
 }
 
 .course-card:hover {
@@ -46,18 +51,18 @@
 .course-info h3 {
   font-size: 1.1em;
   margin: 0 0 6px 0;
-  color: white;
+  color: #333;
 }
 
 .instructor {
   font-size: 0.9em;
-  color: white;
+  color: #666;
   margin-bottom: 10px;
 }
 
 .details {
   font-size: 0.8em;
-  color: white;
+  color: #999;
   margin: 8px 0;
 }
 

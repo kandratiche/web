@@ -6,17 +6,21 @@
 
 .recommend-content {
   display: grid;
+  background-color: black;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  margin-top: calc(3em - 20px);
-  padding: 20px;
+  height: fit-content;
+  margin-top: 3em;
+  margin-left: 2.1em;
+  padding-bottom: 3em;
+  border-radius: 15px;
   gap: 20px;
-  width: calc(100vw - 23em);
+  width: calc(100vw - 27.2em);
 }
 
 .recommend-title {
   font-size: 1.6em;
   margin-bottom: 20px;
-  color: white;
+  color: #333;
 }
 
 .recommend-grid {
@@ -26,10 +30,12 @@
 }
 
 .recommend-card {
-  color: white;
-  background: black;
+  background: white;
   border-radius: 12px;
   overflow: hidden;
+  margin-top: 3em;
+  margin-left: 3em;
+  width: 15.5em;
   height: 25em;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
@@ -58,18 +64,18 @@
 .recommend-info h3 {
   font-size: 1.1em;
   margin: 0 0 6px 0;
-  color: white;
+  color: #333;
 }
 
 .instructor {
   font-size: 0.9em;
-  color: white;
+  color: #666;
   margin-bottom: 8px;
 }
 
 .details {
   font-size: 0.85em;
-  color: white;
+  color: #999;
   margin-bottom: 10px;
 }
 
