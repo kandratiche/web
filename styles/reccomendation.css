@@ -1,13 +1,22 @@
 .recommend-container {
-  padding: 20px;
+  display: flex;
   background-color: #f9f9f9;
   min-height: calc(100vh - 4em);
+}
+
+.recommend-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin-top: calc(3em - 20px);
+  padding: 20px;
+  gap: 20px;
+  width: calc(100vw - 23em);
 }
 
 .recommend-title {
   font-size: 1.6em;
   margin-bottom: 20px;
-  color: #222;
+  color: white;
 }
 
 .recommend-grid {
@@ -16,30 +25,29 @@
   gap: 20px;
 }
 
-/* Карточки рекомендаций */
 .recommend-card {
-  background: #fff;
+  color: white;
+  background: black;
   border-radius: 12px;
   overflow: hidden;
+  height: 25em;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .recommend-card:hover {
-  transform: translateY(-5px);
+  scale: 0.98;
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* Картинка */
 .recommend-image {
   width: 100%;
   height: 140px;
   object-fit: cover;
 }
 
-/* Текст */
 .recommend-info {
   padding: 15px;
   display: flex;
@@ -50,18 +58,18 @@
 .recommend-info h3 {
   font-size: 1.1em;
   margin: 0 0 6px 0;
-  color: #222;
+  color: white;
 }
 
 .instructor {
   font-size: 0.9em;
-  color: #666;
+  color: white;
   margin-bottom: 8px;
 }
 
 .details {
   font-size: 0.85em;
-  color: #999;
+  color: white;
   margin-bottom: 10px;
 }
 
