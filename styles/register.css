@@ -1,13 +1,73 @@
 .reg-container label{
-    display:block;
-    margin-bottom: 10px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: black;
+    text-align: left;
 }
-.reg-container{
-    width:300px;
-    margin:0 auto;
-    text-align:center;
+.reg-container {
+    width: 320px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid silver;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
 }
-.reg-container input{
-    display:block;
-    margin:10px auto;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.reg-container input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px auto 12px auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: block;
+}
+
+.reg-container input:focus {
+    border-color: gray;
+    outline: none;
+}
+.reg-container button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reg-container button:hover {
+    background-color: gray;
+}
+
+.reg-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: black;
+}
+
+.reg-container a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.reg-container a:hover {
+    text-decoration: underline;
 }
