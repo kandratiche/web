@@ -1,0 +1,73 @@
+.reg-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 320px;
+    padding: 20px;
+    border: 1px solid silver;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: black;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+}
+
+body{
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: white;
+}
+.reg-container label{
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: white;
+}
+.reg-container input{
+    margin: 10px auto;
+    display: block;
+    width: 90%;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.reg-container input:focus {
+    border-color: dimgray;
+    outline: none;
+}
+.reg-container button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.reg-container button:hover{
+    background-color: gray; 
+}
+
+.reg-container input[type="submit"] {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.reg-container input[type="submit"]:hover{
+    background-color: gray;
+}
+.reg-container a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.reg-container a:hover{
+    text-decoration: underline;
+}

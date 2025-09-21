@@ -1,0 +1,82 @@
+.reg-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    padding: 20px;
+    background-color: black;
+    border: 1px solid silver;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.reg-container label{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.reg-container input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px auto 12px auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: block;
+}
+
+.reg-container input:focus {
+    border-color: gray;
+    outline: none;
+}
+.reg-container button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    width: 95%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reg-container button:hover {
+    background-color: lightgray;
+}
+
+.reg-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: white;
+}
+
+.reg-container a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.reg-container a:hover {
+    text-decoration: underline;
+}
