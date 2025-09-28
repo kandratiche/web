@@ -5,28 +5,25 @@
 }
 
 .recommend-content {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;        
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: black;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  height: fit-content;
   margin-top: 3em;
   margin-left: 2.1em;
-  padding-bottom: 3em;
+  padding: 2em;
+  padding-bottom: 4em;
   border-radius: 15px;
   gap: 20px;
-  width: calc(100vw - 27.2em);
+  height: fit-content;
+  width: calc(100vw - 31em);
 }
 
 .recommend-title {
   font-size: 1.6em;
   margin-bottom: 20px;
   color: #333;
-}
-
-.recommend-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
 }
 
 .recommend-card {
