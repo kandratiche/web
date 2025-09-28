@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="./styles/welcome.css" />
     <title>Home Page</title>
 </head>
+
 <body>
     <header id="app-header">
-        <img class="app-header-company" src="./assets/Morphines LOGO.jpg" alt="Mearn"/>
+        <img class="app-header-company" src="./assets/Morphines LOGO.jpg" alt="Mearn" />
         <h1>Mearn</h1>
-        <p class="app-header-info">Home</p>
+        <a href="index.html" class="app-header-info">Home</a>
         <p class="app-header-info">Courses</p>
-        <p class="app-header-info">Support</p>
+        <a href="support.html" class="app-header-info">Support</a>
         <a href="profilepage.html">
             <div class="app-header-profile">
                 <p>Your Name</p>
@@ -26,11 +28,21 @@
             <div class="navbar-menu">
                 <h3 class="navbar-section">Menu</h3>
                 <ul class="navbar-list">
-                    <a href="index.html"><li class="navbar-item active">Home</li></a>
-                    <a href="courses.html"><li class="navbar-item">Courses</li></a>
-                    <a href="recommendation.html"><li class="navbar-item">Recommendations</li></a>
-                    <a href="certificates.html"><li class="navbar-item">Certificates</li></a>
-                    <a href="support.html"><li class="navbar-item">Support</li></a>
+                    <a href="index.html">
+                        <li class="navbar-item active">Home</li>
+                    </a>
+                    <a href="courses.html">
+                        <li class="navbar-item">Courses</li>
+                    </a>
+                    <a href="recommendation.html">
+                        <li class="navbar-item">Recommendations</li>
+                    </a>
+                    <a href="certificates.html">
+                        <li class="navbar-item">Certificates</li>
+                    </a>
+                    <a href="support.html">
+                        <li class="navbar-item">Support</li>
+                    </a>
                 </ul>
             </div>
         </nav>
@@ -38,27 +50,31 @@
             <div class="welcomeback">
                 <h2>Welcome Back, Your Name</h2>
                 <p>Let`s find new courses</p>
-                <input type="text" class="welcomeback-search" placeholder="Search for courses"/>
+                <input type="text" id="searchInput" class="welcomeback-search" placeholder="Search for courses" />
                 </br>
-                <button class="welcomeback-explore-button">Explore Courses</button>
-                <img src="explore-courses.svg" alt="explore" class="welcomeback-image"/>
+                <img src="explore-courses.svg" alt="explore" class="welcomeback-image" />
+                <div id="course-results">
+
+                </div>
             </div>
         </div>
     </div>
     <footer>
         <p>&copy; 2025 Mearn. All rights reserved.</p>
         <p>Contact us: morphinew1@gmail.com</p>
-        <p>Follow us on 
-            <a href="#">Facebook</a>, 
-            <a href="#">Twitter</a>, 
+        <p>Follow us on
+            <a href="#">Facebook</a>,
+            <a href="#">Twitter</a>,
             <a href="#">LinkedIn</a>
         </p>
         <p>
             <a href="#">Kairat B.</a>
-            <a href="#">Ramazan A.</a> 
+            <a href="#">Ramazan A.</a>
             <a href="#">Bakyt K.</a>
             <a href="#">Arlan A.</a>
         </p>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
