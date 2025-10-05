@@ -50,3 +50,19 @@
     color: white;
     scale: 0.95;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        align-self: center;
+        height: fit-content;
+        padding-bottom: 3em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .navbar {
+        align-self: center;
+        height: fit-content;
+        padding-bottom: 3em;
+    }
+}

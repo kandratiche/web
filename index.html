@@ -2,79 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="stylesheet" href="./styles/welcome.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/welcome.css" />
 </head>
 
-<body>
-    <header id="app-header">
-        <img class="app-header-company" src="./assets/Morphines LOGO.jpg" alt="Mearn" />
-        <h1>Mearn</h1>
-        <a href="index.html" class="app-header-info">Home</a>
-        <p class="app-header-info">Courses</p>
-        <a href="support.html" class="app-header-info">Support</a>
-        <a href="profilepage.html">
-            <div class="app-header-profile">
-                <p>Your Name</p>
+<body class="m-0 p-0 font-sans">
+    <header id="app-header" class="d-flex align-items-center bg-black text-white w-100 m-0 p-0" style="height: 4em;">
+        <img src="./assets/Morphines LOGO.jpg" alt="Mearn" class="ms-4 me-4" style="width: 50px; transition: 0.3s;" />
+        <h1 class="m-0 me-3">Mearn</h1>
+        <a href="index.html" class="text-white ms-auto me-4 text-decoration-none fs-5">Home</a>
+        <a href="courses.html" class="text-white text-decoration-none fs-5 me-4 mb-0">Courses</a>
+        <a href="support.html" class="text-white text-decoration-none fs-5 me-4">Support</a>
+        <a href="profilepage.html" class="text-dark text-decoration-none" style="margin-right: 50px;">
+            <div class="bg-white rounded-3 text-center d-flex justify-content-center align-items-center"
+                style="width: 130%; height: 3em;  transition: 0.3s;">
+                <p class="m-0">Your Name</p>
             </div>
         </a>
     </header>
-    <div class="homepage-content">
-        <nav class="navbar">
-            <div class="navbar-menu">
-                <h3 class="navbar-section">Menu</h3>
-                <ul class="navbar-list">
-                    <a href="index.html">
-                        <li class="navbar-item active">Home</li>
-                    </a>
-                    <a href="courses.html">
-                        <li class="navbar-item">Courses</li>
-                    </a>
-                    <a href="recommendation.html">
-                        <li class="navbar-item">Recommendations</li>
-                    </a>
-                    <a href="certificates.html">
-                        <li class="navbar-item">Certificates</li>
-                    </a>
-                    <a href="support.html">
-                        <li class="navbar-item">Support</li>
-                    </a>
+    <div class="d-grid" style="grid-template-columns: 23em 1fr; width: 100vw; height: calc(100vh - 4em);">
+        <nav class="bg-light border-end h-100">
+            <div class="p-4">
+                <h3 class="fw-bold mb-3">Menu</h3>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="index.html" class="text-dark fw-semibold text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="courses.html" class="text-dark text-decoration-none">Courses</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="recommendation.html" class="text-dark text-decoration-none">Recommendations</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="certificates.html" class="text-dark text-decoration-none">Certificates</a>
+                    </li>
+                    <li>
+                        <a href="support.html" class="text-dark text-decoration-none">Support</a>
+                    </li>
                 </ul>
             </div>
         </nav>
-        <div class="homepage-container">
-            <div class="welcomeback">
-                <h2>Welcome Back, Your Name</h2>
-                <p>Let`s find new courses</p>
-                <input type="text" id="searchInput" class="welcomeback-search" placeholder="Search for courses" />
-                </br>
-                <img src="explore-courses.svg" alt="explore" class="welcomeback-image" />
-                <div id="course-results">
-
-                </div>
+        <div class="d-grid place-items-center" style="width: calc(100vw - 23em); height: calc(100vh - 4em);">
+            <div class="text-center" style="margin-top: 100px;">
+                <h2 class="fw-bold">Welcome Back, Your Name</h2>
+                <p class="text-secondary">Let’s find new courses</p>
+                <input type="text" id="searchInput" class="form-control w-50 mx-auto my-3"
+                    placeholder="Search for courses" />
+                <img src="explore-courses.svg" alt="explore" class="img-fluid my-3" style="max-width: 400px;" />
+                <div id="course-results"></div>
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2025 Mearn. All rights reserved.</p>
-        <p>Contact us: morphinew1@gmail.com</p>
-        <p>Follow us on
-            <a href="#">Facebook</a>,
-            <a href="#">Twitter</a>,
-            <a href="#">LinkedIn</a>
+    <footer class="d-flex justify-content-around align-items-center bg-black text-white fixed-bottom py-2"
+        style="height: 3em;">
+        <p class="m-0">&copy; 2025 Mearn. All rights reserved.</p>
+        <p class="m-0">Contact us: morphinew1@gmail.com</p>
+        <p class="m-0">
+            Follow us on
+            <a href="#" class="text-white text-decoration-underline">Facebook</a>,
+            <a href="#" class="text-white text-decoration-underline">Twitter</a>,
+            <a href="#" class="text-white text-decoration-underline">LinkedIn</a>
         </p>
-        <p>
-            <a href="#">Kairat B.</a>
-            <a href="#">Ramazan A.</a>
-            <a href="#">Bakyt K.</a>
-            <a href="#">Arlan A.</a>
+        <p class="m-0">
+            <a href="#" class="text-white me-2">Kairat B.</a>
+            <a href="#" class="text-white me-2">Ramazan A.</a>
+            <a href="#" class="text-white me-2">Bakyt K.</a>
+            <a href="#" class="text-white">Arlan A.</a>
         </p>
     </footer>
-    <script src="script.js"></script>
 </body>
 
 </html>

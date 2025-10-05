@@ -92,3 +92,46 @@
 .recommend-button:hover {
   background: #0056b3;
 }
+
+@media screen and (max-width: 768px) {
+    .recommend-container {
+      flex-direction: column;
+    }
+
+    .recommend-content {
+      justify-content: center;
+      gap: 40px;
+      margin-top: 0;
+      margin-left: 0;
+      width: 70vw;
+      align-self: center;
+    }
+
+    .recommend-card {
+      align-self: center;
+      margin-top: 0;
+      margin-left: 0;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .recommend-container {
+      flex-direction: column;
+    }
+
+    .recommend-content {
+      justify-content: center;
+      gap: 40px;
+      margin-top: 0;
+      margin-left: 0;
+      width: 70vw;
+      align-self: center;
+    }
+
+    .recommend-card {
+      align-self: center;
+      margin-top: 0;
+      margin-left: 0;
+    }
+}
