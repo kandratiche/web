@@ -217,3 +217,43 @@ footer {
 .profile-info-second-section {
     margin-left: 2em;
 }
+
+body.dark-theme {
+    background-color: black;
+}
+
+body.dark-theme #app-header {
+    color: white;
+    background-color: rgb(30, 30, 30);
+}
+
+body.dark-theme .app-header-company {
+    border-radius: 10px;
+}
+
+body.dark-theme .app-header-info:hover {
+    color: rgb(60, 60, 60)
+}
+
+body.dark-theme .app-header-profile {
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+
+body.dark-theme .navbar-menu{
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+body.dark-theme .profile-container {
+    background-color: rgb(30, 30, 30);
+}
+
+body.dark-theme .profile-edit-button {
+    background-color: rgb(60,60,60);
+    color: white
+}
+
+body.dark-theme footer {
+    background-color: rgb(30, 30, 30);
+}

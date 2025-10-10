@@ -16,7 +16,7 @@
 }
 
 .course-card {
-  position: relative;
+  position: absolute;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid white;

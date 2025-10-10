@@ -15,13 +15,14 @@
             <input type="text", value="">
             <label>Name</label>
             <input type="text", value="">
-            <label>Email</label>
-            <input type="text", value="">
+            <label >Email</label>
+            <input id="email" type="text", value="">
             <label>Username</label>
             <input type="text", value="">
             <label>Password</label>
-            <input type="text", value="">
-            <a href="index.html"><button type="button">Sign Up</button></a>
+            <input id="password" type="text", value="">
+            <button id="signbtn" type="button">Sign Up</button>
+            <p id="errorMsg" style="color:red"></p>
         </form>
         <p>you already have an account?</p>
         <a href="loginpage.html">login</a>
@@ -41,5 +42,33 @@
             <a href="#">Arlan A.</a>
         </p>
     </footer>
+    <script>
+        document.getElementById('signbtn').addEventListener('click', function () {
+            const inputs = document.querySelectorAll('form input[type="text"]');
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            let errorMsg = '';
+
+            for (let input of inputs) {
+                if (input.value.trim() === '') {
+                    errorMsg = 'All fields are required.';
+                    break;
+                }
+            }
+
+            if (!errorMsg && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errorMsg = 'Please enter a valid email address.';
+            }
+
+            if (!errorMsg && password.length < 6) {
+                errorMsg = 'Password must be at least 6 characters.';
+            }
+
+            document.getElementById('errorMsg').textContent = errorMsg;
+            if (!errorMsg) {
+                document.querySelector('form').submit();
+            }
+        });
+    </script>
 </body>
 </html>
