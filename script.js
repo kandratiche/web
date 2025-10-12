@@ -1,11 +1,20 @@
-const themeBtn = document.getElementById("theme-toggle");
+const dark = document.getElementById("dark-toggle");
+const light = document.getElementById("light-toggle");
 
-if(themeBtn) {
-  themeBtn.addEventListener("click", () => {
-    console.log('theme')
-    document.body.classList.toggle("dark-theme");
+if(dark) {
+  dark.addEventListener("click", () => {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
   });
 }
+
+if(light) {
+  light.addEventListener("click", () => {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+  });
+}
+
 
 const time = document.getElementById("time");
 setInterval(() => {
