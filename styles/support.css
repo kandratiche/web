@@ -68,6 +68,7 @@
     cursor: pointer;
     font-weight: bold;
     transition: opacity 0.3s;
+    margin-bottom: 10px;
 }
 
 .support-card button:hover {

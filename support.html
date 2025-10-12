@@ -46,7 +46,28 @@
                 <div class="support-card">
                     <h3>❓ FAQs</h3>
                     <p>you can ask questions</p>
-                    <button>View FAQs</button>
+                    <button id="faq-btn">View FAQs</button>
+                    
+                    <div id="faq-section" class="faq-section" style="display:none;">
+                        <div class="faq-item">
+                            <button class="faq-question">What is Mearn?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>Mearn is a platform that provides courses and resources to help learners improve their skills.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">How can I contact support?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>You can contact us through the "Send Message" button or email us directly.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">What courses do you offer?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>We offer a variety of courses in different areas such as programming, design, and data science.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="support-card">
                     <h3>💻 Technical Help</h3>
@@ -83,5 +104,30 @@
         </div>
     </div>
     <script src="popup.js"></script>
+    <script>
+        
+        document.getElementById('faq-btn').addEventListener('click', function() {
+            const faqSection = document.getElementById('faq-section');
+            if (faqSection.style.display === 'none') {
+                faqSection.style.display = 'block';
+            } else {
+                faqSection.style.display = 'none';
+            }
+        });
+
+        
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
