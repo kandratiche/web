@@ -16,7 +16,7 @@
 }
 
 .course-card {
-  position: absolute;
+  position: relative;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid white;
@@ -44,7 +44,7 @@
 
 
 .course-info {
-  position: relative;
+  position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
   color: white;
