@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
   <link rel="stylesheet" href="./styles/style.css" />
   <link rel="stylesheet" href="./styles/courses.css">
   <link rel="stylesheet" href="./styles/navbar.css"/>
-  <title>Courses</title>
 </head>
 <body>
   <header id="app-header">
@@ -21,101 +21,42 @@
           </div>
       </a>
   </header>
+
   <div class="courses-container">
     <nav class="navbar">
       <div class="navbar-menu">
         <h3 class="navbar-section">Menu</h3>
-          <ul class="navbar-list">
-              <a href="index.html"><li class="navbar-item">Home</li></a>
-              <a href="courses.html"><li class="navbar-item active">Courses</li></a>
-              <a href="recommendation.html"><li class="navbar-item">Recommendations</li></a>
-              <a href="certificates.html"><li class="navbar-item">Certificates</li></a>
-              <a href="support.html"><li class="navbar-item">Support</li></a>
-          </ul>
+        <ul class="navbar-list">
+          <a href="index.html"><li class="navbar-item">Home</li></a>
+          <a href="courses.html"><li class="navbar-item active">Courses</li></a>
+          <a href="recommendation.html"><li class="navbar-item">Recommendations</li></a>
+          <a href="certificates.html"><li class="navbar-item">Certificates</li></a>
+          <a href="support.html"><li class="navbar-item">Support</li></a>
+        </ul>
       </div>  
     </nav>
-    <div class="courses-content">
-      <div class="course-card">
-        <img src="./assets/ads.png" alt="Python Course" class="course-image">
-        <div class="course-info">
-          <h3>Data Structures and Algorithms with Python</h3>
-          <p class="instructor">Dr. Sarah Johnson</p>
-          <p class="status in-progress">In Progress</p>
-          <p class="details">12/24 • 6h</p>
-          <button class="course-button">Continue</button>
-        </div>
-      </div>
-  
-      <div class="course-card">
-        <img src="./assets/data-science.png" alt="Data Science" class="course-image">
-        <div class="course-info">
-          <h3>Data Science Fundamentals</h3>
-          <p class="instructor">Prof. Michael Chen</p>
-          <p class="status not-started">Not Started</p>
-          <p class="details">0/32 • 12h</p>
-          <button class="course-button">Start</button>
-        </div>
-      </div>
-  
-      <div class="course-card">
-        <img src="./assets/html5-css3.png" alt="HTML & CSS" class="course-image">
-        <div class="course-info">
-          <h3>HTML & CSS Mastery</h3>
-          <p class="instructor">Emily Rodriguez</p>
-          <p class="status completed">Completed</p>
-          <p class="details">18/18 • 6h</p>
-          <button class="course-button view-cert">View Certificate</button>
-        </div>
-      </div>
-  
-      <div class="course-card">
-        <img src="./assets/js.png" alt="JavaScript" class="course-image">
-        <div class="course-info">
-          <h3>JavaScript Fundamentals</h3>
-          <p class="instructor">Alex Johnson</p>
-          <p class="status in-progress">In Progress</p>
-          <p class="details">6/20 • 2.1h</p>
-          <button class="course-button">Continue</button>
-        </div>
-      </div>
-  
-      <div class="course-card">
-        <img src="./assets/uxui.png" alt="UI/UX Design" class="course-image">
-        <div class="course-info">
-          <h3>Mobile UI/UX Design</h3>
-          <p class="instructor">Emily Rodriguez</p>
-          <p class="status in-progress">In Progress</p>
-          <p class="details">9/20 • 3.5h</p>
-          <button class="course-button">Continue</button>
-        </div>
-      </div>
-  
-      <div class="course-card">
-        <img src="./assets/react.png" alt="React" class="course-image">
-        <div class="course-info">
-          <h3>React for Beginners</h3>
-          <p class="instructor">David Wilson</p>
-          <p class="status in-progress">In Progress</p>
-          <p class="details">2/20 • 0.8h</p>
-          <button class="course-button">Continue</button>
-        </div>
-      </div>
-    </div>
+
+    <!-- 🔽 Dynamic Course Content Will Be Injected Here -->
+    <div class="courses-content" id="courses-container"></div>
   </div>
+
   <footer>
-        <p>&copy; 2025 Mearn. All rights reserved.</p>
-        <p>Contact us: morphinew1@gmail.com</p>
-        <p>Follow us on 
-            <a href="#">Facebook</a>, 
-            <a href="#">Twitter</a>, 
-            <a href="#">LinkedIn</a>
-        </p>
-        <p>
-            <a href="#">Kairat B.</a>
-            <a href="#">Ramazan A.</a> 
-            <a href="#">Bakyt K.</a>
-            <a href="#">Arlan A.</a>
-        </p>
-    </footer>
+    <p>&copy; 2025 Mearn. All rights reserved.</p>
+    <p>Contact us: morphinew1@gmail.com</p>
+    <p>Follow us on
+        <a href="#">Facebook</a>, 
+        <a href="#">Twitter</a>, 
+        <a href="#">LinkedIn</a>
+    </p>
+    <p>
+        <a href="#">Kairat B.</a>
+        <a href="#">Ramazan A.</a> 
+        <a href="#">Bakyt K.</a>
+        <a href="#">Arlan A.</a>
+    </p>
+  </footer>
+
+  <!-- ✅ Connect JavaScript File -->
+  <script src="courses.js"></script>
 </body>
 </html>
