@@ -1,6 +1,9 @@
 const dark = document.getElementById("dark-toggle");
 const light = document.getElementById("light-toggle");
 
+
+
+
 if(dark) {
   dark.addEventListener("click", () => {
     document.body.style.backgroundColor = "black";
