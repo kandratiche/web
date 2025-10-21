@@ -37,20 +37,38 @@
         <div class="support-content">
             <h2>Support Center</h2>
             <p class="support-subtitle">We’re here to help you with your learning journey</p>
-    
             <div class="support-grid">
                 <div class="support-card">
                     <h3>📩 Contact Us</h3>
                     <p>you can contact us</p>
-                    <button>Send Message</button>
+                    <button class="popup-btn">Send Message</button>
                 </div>
-    
                 <div class="support-card">
                     <h3>❓ FAQs</h3>
                     <p>you can ask questions</p>
-                    <button>View FAQs</button>
+                    <button id="faq-btn">View FAQs</button>
+                    
+                    <div id="faq-section" class="faq-section" style="display:none;">
+                        <div class="faq-item">
+                            <button class="faq-question">What is Mearn?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>Mearn is a platform that provides courses and resources to help learners improve their skills.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">How can I contact support?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>You can contact us through the "Send Message" button or email us directly.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">What courses do you offer?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>We offer a variety of courses in different areas such as programming, design, and data science.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-    
                 <div class="support-card">
                     <h3>💻 Technical Help</h3>
                     <p>you can have tech help here</p>
@@ -74,5 +92,36 @@
             <a href="#">Arlan A.</a>
         </p>
     </footer>
+    
+    
+    
+    
+    
+    
+    <div class="popup-form" style="display:none;">
+    <div class="popup-content">
+        <button class="close-btn" style="margin-left: 380px; width: 30px;">x</button>
+        <h2>Contact Us</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <textarea placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+            <button type="button" id="reset-btn">Reset Form</button>
+        </form>
+    </div>
+    </div>
+
+    
+    
+    
+    <div class="success-message" style="display:none;">
+    <div class="success-content">
+        <button class="close-success-btn" style="margin-left: 380px; width: 30px;">x</button>
+        <h2>✅ Message Sent!</h2>
+        <p>Thank you for contacting us! We'll get back to you soon.</p>
+    </div>
+    </div>    
+    <script src="popup.js"></script>
+
 </body>
 </html>
