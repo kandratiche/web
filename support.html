@@ -21,6 +21,10 @@
             </div>
         </a>
     </header>
+
+    <!-- Greeting section -->
+    <div id="greeting"></div>
+
     <div class="support-container">
         <nav class="navbar">
             <div class="navbar-menu">
@@ -34,23 +38,44 @@
                 </ul>
             </div>
         </nav>
+
         <div class="support-content">
             <h2>Support Center</h2>
             <p class="support-subtitle">We’re here to help you with your learning journey</p>
-    
             <div class="support-grid">
                 <div class="support-card">
                     <h3>📩 Contact Us</h3>
                     <p>you can contact us</p>
-                    <button>Send Message</button>
+                    <button class="popup-btn">Send Message</button>
                 </div>
-    
                 <div class="support-card">
                     <h3>❓ FAQs</h3>
                     <p>you can ask questions</p>
-                    <button>View FAQs</button>
+                    <button id="faq-btn">View FAQs</button>
+                    
+                    <div id="faq-section" class="faq-section" style="display:none;">
+                        <div class="faq-item">
+                            <button class="faq-question">What is Mearn?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>Mearn is a platform that provides courses and resources to help learners improve their skills.</p>
+                                <button class="read-more-btn">Read More</button>
+                                <p class="extra-content" style="display:none;">Additional information about Mearn...</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">How can I contact support?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>You can contact us through the "Send Message" button or email us directly.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">What courses do you offer?</button>
+                            <div class="faq-answer" style="display:none;">
+                                <p>We offer a variety of courses in different areas such as programming, design, and data science.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-    
                 <div class="support-card">
                     <h3>💻 Technical Help</h3>
                     <p>you can have tech help here</p>
@@ -59,6 +84,7 @@
             </div>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2025 Mearn. All rights reserved.</p>
         <p>Contact us: morphinew1@gmail.com</p>
@@ -74,5 +100,82 @@
             <a href="#">Arlan A.</a>
         </p>
     </footer>
+
+    <div class="popup-form" style="display:none;">
+        <div class="popup-content">
+            <button class="close-btn" style="margin-left: 380px; width: 30px;">x</button>
+            <h2>Contact Us</h2>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <textarea placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+    <script>
+        window.onload = function() {
+            // Display the time-based greeting
+            function displayGreeting() {
+                const currentHour = new Date().getHours(); // Get the current hour (0-23)
+                let greeting;
+
+                // Determine the time of day and set the greeting message
+                if (currentHour >= 5 && currentHour < 12) {
+                    greeting = "Good Morning!";
+                } else if (currentHour >= 12 && currentHour < 18) {
+                    greeting = "Good Afternoon!";
+                } else {
+                    greeting = "Good Evening!";
+                }
+
+                // Display the greeting inside the 'greeting' div
+                document.getElementById('greeting').innerText = greeting;
+            }
+
+            // Call the function to display the greeting
+            displayGreeting();
+
+            // Toggle the FAQ section
+            document.getElementById('faq-btn').addEventListener('click', function() {
+                const faqSection = document.getElementById('faq-section');
+                if (faqSection.style.display === 'none') {
+                    faqSection.style.display = 'block';
+                } else {
+                    faqSection.style.display = 'none';
+                }
+            });
+
+            // Toggle individual FAQ answers
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    
+                    if (answer.style.display === 'none' || answer.style.display === '') {
+                        answer.style.display = 'block';
+                    } else {
+                        answer.style.display = 'none';
+                    }
+                });
+            });
+
+            // Read More button functionality
+            const readMoreButtons = document.querySelectorAll('.read-more-btn');
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const extraContent = this.nextElementSibling;
+                    if (extraContent.style.display === 'none' || extraContent.style.display === '') {
+                        extraContent.style.display = 'block';
+                        this.textContent = 'Read Less'; // Change button text to 'Read Less'
+                    } else {
+                        extraContent.style.display = 'none';
+                        this.textContent = 'Read More'; // Change button text back to 'Read More'
+                    }
+                });
+            });
+        };
+    </script>
 </body>
 </html>
