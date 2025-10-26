@@ -136,3 +136,58 @@ cards.forEach(card => {
     }, 150);
   });
 });
+$(document).ready(function () {
+  // Добавляем строку поиска внутрь блока с курсами, сверху
+  if ($(".search-bar").length === 0) {
+    const searchBar = `
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search courses..." autocomplete="off">
+        <button id="highlightBtn">Highlight</button>
+        <div id="suggestions" class="suggestion-box"></div>
+      </div>
+    `;
+    $(".courses-content").prepend(searchBar); // именно prepend!
+  }
+
+  // Фильтр по названию курса
+  $("#searchInput").on("keyup", function () {
+    let value = $(this).val().toLowerCase();
+    $(".course-card").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().includes(value));
+    });
+  });
+
+  // Автодополнение
+  const courseNames = [];
+  $(".course-info h3").each(function () {
+    courseNames.push($(this).text());
+  });
+
+  $("#searchInput").on("input", function () {
+    const input = $(this).val().toLowerCase();
+    const suggestions = courseNames.filter(c => c.toLowerCase().includes(input));
+    const box = $("#suggestions").empty();
+    if (input && suggestions.length) {
+      suggestions.forEach(s => box.append(`<div class="suggestion-item">${s}</div>`));
+      box.show();
+    } else {
+      box.hide();
+    }
+  });
+
+  $(document).on("click", ".suggestion-item", function () {
+    $("#searchInput").val($(this).text());
+    $("#suggestions").hide();
+    $("#searchInput").trigger("keyup");
+  });
+
+  // Подсветка
+  $("#highlightBtn").on("click", function () {
+    const keyword = $("#searchInput").val().trim();
+    if (!keyword) return;
+    $(".course-info h3").each(function () {
+      const text = $(this).text();
+      $(this).html(text.replace(new RegExp(`(${keyword})`, "gi"), "<span class='highlight'>$1</span>"));
+    });
+  });
+});
