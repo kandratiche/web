@@ -22,7 +22,6 @@
         </a>
     </header>
 
-    <!-- Greeting section -->
     <div id="greeting"></div>
 
     <div class="support-container">
@@ -79,7 +78,12 @@
                 <div class="support-card">
                     <h3>💻 Technical Help</h3>
                     <p>you can have tech help here</p>
-                    <button>Get Help</button>
+                    <button id="get-help-btn">Get Help</button>
+                </div>
+
+
+                <div id="help-images" class="support-images" style="display: none;">
+                <img class="lazy" data-src="./assets/support.png" alt="Image 1">
                 </div>
             </div>
         </div>
@@ -109,104 +113,92 @@
                 <input type="email" placeholder="Enter your email" required>
                 <textarea placeholder="Your message" required></textarea>
                 <button type="submit">Send</button>
+                <button type="button" id="reset-btn">Reset Form</button>
             </form>
+            
+            <p>or you can write us at: <span id="support-email">morphinew1@gmail.com</span></p>
+            <button id="copy-btn" data-clipboard-target="#support-email">Copy Email</button>
         </div>
     </div>
 
+    <div class="success-message" style="display:none;">
+        <div class="success-content">
+            <button class="close-success-btn" style="margin-left: 380px; width: 30px;">x</button>
+            <h2>✅ Message Sent!</h2>
+            <p>Thank you for contacting us! We'll get back to you soon.</p>
+        </div>
+    </div>
+
+    <div id="notification" class="notification" style="display:none;">
+        Your message has been successfully sent!
+    </div>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     <script src="popup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        window.onload = function() {
-            // Display the time-based greeting
-            function displayGreeting() {
-                const currentHour = new Date().getHours(); // Get the current hour (0-23)
-                let greeting;
-
-                // Determine the time of day and set the greeting message
-                if (currentHour >= 5 && currentHour < 12) {
-                    greeting = "Good Morning!";
-                } else if (currentHour >= 12 && currentHour < 18) {
-                    greeting = "Good Afternoon!";
-                } else {
-                    greeting = "Good Evening!";
-                }
-
-                // Display the greeting inside the 'greeting' div
-                document.getElementById('greeting').innerText = greeting;
+        $(document).ready(function() {
+            
+            function handleFormSubmit(event) {
+                event.preventDefault();
+                
+                const email = contactForm.querySelector('input[type="email"]').value;
+                const message = contactForm.querySelector('textarea').value;
+                
+                const formData = {
+                    email: email,
+                    message: message
+                };
+                
+                simulateFetch(formData, function(response) {
+                    if (response.success) {
+                        popupForm.style.display = 'none';
+                        contactForm.reset();
+                        successMessage.style.display = 'flex';
+                        $('#notification').fadeIn().delay(2000).fadeOut();
+                    }
+                });
             }
 
-            // Call the function to display the greeting
-            displayGreeting();
-
-            // Toggle the FAQ section
-            document.getElementById('faq-btn').addEventListener('click', function() {
-                const faqSection = document.getElementById('faq-section');
-                if (faqSection.style.display === 'none') {
-                    faqSection.style.display = 'block';
-                } else {
-                    faqSection.style.display = 'none';
-                }
-            });
-
-            // Toggle individual FAQ answers
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
-                    const answer = this.nextElementSibling;
-                    
-                    if (answer.style.display === 'none' || answer.style.display === '') {
-                        answer.style.display = 'block';
-                    } else {
-                        answer.style.display = 'none';
-                    }
+            
+            $('#copy-btn').on('click', function() {
+                var text = $('#support-email').text();
+                navigator.clipboard.writeText(text).then(function() {
+                    $('#copy-btn').text('✔ Copied to clipboard!').attr('disabled', true);
+                    setTimeout(function() {
+                        $('#copy-btn').text('Copy Email').attr('disabled', false);
+                    }, 2000);
                 });
             });
 
-            // Read More button functionality
-            const readMoreButtons = document.querySelectorAll('.read-more-btn');
-            readMoreButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const extraContent = this.nextElementSibling;
-                    if (extraContent.style.display === 'none' || extraContent.style.display === '') {
-                        extraContent.style.display = 'block';
-                        this.textContent = 'Read Less'; // Change button text to 'Read Less'
-                    } else {
-                        extraContent.style.display = 'none';
-                        this.textContent = 'Read More'; // Change button text back to 'Read More'
+            
+             $(window).on('scroll', function() {
+                $('img.lazy').each(function() {
+                    if ($(this).offset().top <= $(window).scrollTop() + $(window).height()) {
+                        $(this).attr('src', $(this).data('src')).removeClass('lazy');
                     }
                 });
+            }).trigger('scroll');
+
+           
+            $('#get-help-btn').on('click', function() {
+                $('#help-images').fadeIn();
             });
-        };
+
+            $('#get-help-btn').on('click', function() {
+            $('#help-images').toggle(); 
+            });
+        });
     </script>
-    
-    
-    
-    
-    
-    
-    <div class="popup-form" style="display:none;">
-    <div class="popup-content">
-        <button class="close-btn" style="margin-left: 380px; width: 30px;">x</button>
-        <h2>Contact Us</h2>
-        <form>
-            <input type="email" placeholder="Enter your email" required>
-            <textarea placeholder="Your message" required></textarea>
-            <button type="submit">Send</button>
-            <button type="button" id="reset-btn">Reset Form</button>
-        </form>
-    </div>
-    </div>
-
-    
-    
-    
-    <div class="success-message" style="display:none;">
-    <div class="success-content">
-        <button class="close-success-btn" style="margin-left: 380px; width: 30px;">x</button>
-        <h2>✅ Message Sent!</h2>
-        <p>Thank you for contacting us! We'll get back to you soon.</p>
-    </div>
-    </div>    
-    <script src="popup.js"></script>
-
 </body>
 </html>
