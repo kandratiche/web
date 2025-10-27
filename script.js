@@ -29,3 +29,24 @@ setInterval(() => {
 
 const readMoreBtns = document.querySelectorAll('.read-more-btn');
 
+$(document).ready(function() {
+
+  $("#search-input").on("keyup", function() {
+    const value = $(this).val().toLowerCase();
+
+    $(".recommend-card").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+
+    $(".recommend-card").each(function() {
+      $(this).html($(this).html().replace(/<span class="highlight">(.*?)<\/span>/g, '$1'));
+    });
+
+    if (value) {
+      $(".recommend-card:visible h3, .recommend-card:visible p").each(function() {
+        const regex = new RegExp(`(${value})`, "gi");
+        $(this).html($(this).text().replace(regex, "<span class='highlight'>$1</span>"));
+      });
+    }
+  });
+});

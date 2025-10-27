@@ -82,3 +82,21 @@
 .view-btn:hover {
     opacity: 0.8;
 }
+
+.search-bar {
+  margin: 20px auto;
+  text-align: center;
+}
+
+#search-input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
