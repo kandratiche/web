@@ -20,40 +20,30 @@ popupForm.addEventListener('click', (event) => {
     }
 });
 
-
-    
 document.getElementById('faq-btn').addEventListener('click', function() {
-     const faqSection = document.getElementById('faq-section');
-        if (faqSection.style.display === 'none') {
-                faqSection.style.display = 'block';
-        } else {
-                faqSection.style.display = 'none';
-        }
-    });
+    const faqSection = document.getElementById('faq-section');
+    if (faqSection.style.display === 'none') {
+        faqSection.style.display = 'block';
+    } else {
+        faqSection.style.display = 'none';
+    }
+});
 
-        
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
-                
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
         if (answer.style.display === 'none' || answer.style.display === '') {
-                answer.style.display = 'block';
+            answer.style.display = 'block';
         } else {
-                answer.style.display = 'none';
+            answer.style.display = 'none';
         }
     });
 });
 
-
-
-
-
 const contactForm = document.querySelector('.popup-content form');
 const successMessage = document.querySelector('.success-message');
 const closeSuccessBtn = document.querySelector('.close-success-btn');
-
-
 
 function handleFormSubmit(event) {
     event.preventDefault();
@@ -71,6 +61,7 @@ function handleFormSubmit(event) {
             popupForm.style.display = 'none';
             contactForm.reset();
             successMessage.style.display = 'flex';
+            $('#notification').fadeIn().delay(2000).fadeOut();
         }
     });
 }
@@ -97,16 +88,9 @@ successMessage.addEventListener('click', function(event) {
     }
 });
 
-
-
-
 const resetBtn = document.getElementById('reset-btn');
 
 resetBtn.addEventListener('click', function() {
     const inputs = document.querySelectorAll('.popup-content input, .popup-content textarea');
     inputs.forEach(input => input.value = '');
 });
-
-
-
-
