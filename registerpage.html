@@ -41,5 +41,31 @@
             <a href="#">Arlan A.</a>
         </p>
     </footer>
+<style>
+    /* Style for loading spinner */
+    #loading-spinner {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<script>
+    // Show spinner on form submit
+    $('#registerForm').on('submit', function(event) {
+        event.preventDefault();
+        $('#loading-spinner').show();
+        $(this).find('button[type="submit"]').attr('disabled', true);
+        setTimeout(function() {
+            $('#loading-spinner').hide();
+            $('#registerForm').find('button[type="submit"]').attr('disabled', false);
+            alert('Form submitted successfully!');
+        }, 2000); // Simulate server call delay
+    });
+</script>
+
 </body>
 </html>
